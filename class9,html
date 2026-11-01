@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Class 9 | SHIVORA</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #10243A;
+    color: #F5F7FA;
+}
+
+header {
+    padding: 22px 8%;
+    background: #0B1929;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #F28C28;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.home {
+    color: white;
+    text-decoration: none;
+}
+
+.heading {
+    text-align: center;
+    padding: 55px 20px 30px;
+}
+
+.heading h1 {
+    color: #F28C28;
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.heading p {
+    font-size: 18px;
+}
+
+.subjects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    padding: 30px 8% 70px;
+}
+
+.card {
+    background: #F5F7FA;
+    color: #10243A;
+    padding: 35px 20px;
+    text-align: center;
+    border-radius: 14px;
+    border-bottom: 5px solid #F28C28;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card h2 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #555;
+    font-size: 14px;
+}
+
+.card a {
+    text-decoration: none;
+    color: #10243A;
+}
+
+.status {
+    display: inline-block;
+    margin-top: 15px;
+    background: #2878B8;
+    color: white;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #0B1929;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🔱 SHIVORA</div>
+    <a class="home" href="index.html">Home</a>
+</header>
+
+<section class="heading">
+    <h1>CLASS 9</h1>
+    <p>Choose Your Subject</p>
+    <p>Learn. Practise. Grow.</p>
+</section>
+
+<section class="subjects">
+
+    <div class="card">
+        <h2>Mathematics</h2>
+        <p>Learn concepts and practise questions.</p>
+        <span class="status">Coming Soon</span>
+    </div>
+
+    <div class="card">
+        <h2>Science</h2>
+        <p>Explore Physics, Chemistry and Biology.</p>
+        <span class="status">Coming Soon</span>
+    </div>
+
+    <div class="card">
+        <h2>English</h2>
+        <p>Improve grammar and literature.</p>
+        <span class="status">Coming Soon</span>
+    </div>
+
+    <div class="card">
+        <h2>Hindi</h2>
+        <p>Study language and literature.</p>
+        <span class="status">Coming Soon</span>
+    </div>
+
+    <div class="card">
+        <h2>Punjabi</h2>
+        <p>Learn language and literature.</p>
+        <span class="status">Coming Soon</span>
+    </div>
+
+    <div class="card">
+        <a href="socialscience.html">
+            <h2>Social Science</h2>
+            <p>History, Geography, Civics and Economics.</p>
+            <span class="status">Explore Subjects</span>
+        </a>
+    </div>
+
+</section>
+
+<footer>
+    <p>SHIVORA – Awaken Your Knowledge. 🔱</p>
+</footer>
+
+</body>
+</html>
