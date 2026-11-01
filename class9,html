@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Class 9 | SHIVORA</title>
 
 <style>
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -20,8 +19,8 @@ body {
 }
 
 header {
-    padding: 22px 8%;
     background: #0B1929;
+    padding: 22px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,20 +32,20 @@ header {
     font-weight: bold;
 }
 
-.home {
+header a {
     color: white;
     text-decoration: none;
 }
 
 .heading {
     text-align: center;
-    padding: 55px 20px 30px;
+    padding: 65px 20px 35px;
 }
 
 .heading h1 {
     color: #F28C28;
-    font-size: 38px;
-    margin-bottom: 12px;
+    font-size: 40px;
+    margin-bottom: 15px;
 }
 
 .heading p {
@@ -54,10 +53,12 @@ header {
 }
 
 .subjects {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 20px 70px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 22px;
-    padding: 30px 8% 70px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
 }
 
 .card {
@@ -71,31 +72,30 @@ header {
 }
 
 .card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-6px);
 }
 
 .card h2 {
     margin-bottom: 12px;
+    color: #10243A;
 }
 
 .card p {
     color: #555;
-    font-size: 14px;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.badge {
+    background: #2878B8;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 13px;
 }
 
 .card a {
     text-decoration: none;
-    color: #10243A;
-}
-
-.status {
-    display: inline-block;
-    margin-top: 15px;
-    background: #2878B8;
-    color: white;
-    padding: 7px 14px;
-    border-radius: 20px;
-    font-size: 12px;
 }
 
 footer {
@@ -110,7 +110,7 @@ footer {
 
 <header>
     <div class="logo">🔱 SHIVORA</div>
-    <a class="home" href="index.html">Home</a>
+    <a href="index.html">Home</a>
 </header>
 
 <section class="heading">
@@ -123,39 +123,39 @@ footer {
 
     <div class="card">
         <h2>Mathematics</h2>
-        <p>Learn concepts and practise questions.</p>
-        <span class="status">Coming Soon</span>
+        <p>Explore concepts and practise problems.</p>
+        <span class="badge">Coming Soon</span>
     </div>
 
     <div class="card">
         <h2>Science</h2>
-        <p>Explore Physics, Chemistry and Biology.</p>
-        <span class="status">Coming Soon</span>
+        <p>Discover Physics, Chemistry and Biology.</p>
+        <span class="badge">Coming Soon</span>
     </div>
 
     <div class="card">
         <h2>English</h2>
         <p>Improve grammar and literature.</p>
-        <span class="status">Coming Soon</span>
+        <span class="badge">Coming Soon</span>
     </div>
 
     <div class="card">
         <h2>Hindi</h2>
-        <p>Study language and literature.</p>
-        <span class="status">Coming Soon</span>
+        <p>Explore language and literature.</p>
+        <span class="badge">Coming Soon</span>
     </div>
 
     <div class="card">
         <h2>Punjabi</h2>
-        <p>Learn language and literature.</p>
-        <span class="status">Coming Soon</span>
+        <p>Explore language and literature.</p>
+        <span class="badge">Coming Soon</span>
     </div>
 
     <div class="card">
         <a href="socialscience.html">
             <h2>Social Science</h2>
             <p>History, Geography, Civics and Economics.</p>
-            <span class="status">Explore Subjects</span>
+            <span class="badge">Explore Subjects</span>
         </a>
     </div>
 
