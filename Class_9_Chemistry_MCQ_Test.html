@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Class 9 Chemistry MCQ Test</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:900px;margin:30px auto;padding:20px;background:#f5f7fb}
+h1{text-align:center}.q{background:white;padding:18px;margin:16px 0;border-radius:12px;box-shadow:0 2px 8px #ddd}
+label{display:block;padding:10px;margin:7px 0;background:#f0f2f7;border-radius:8px;cursor:pointer}
+button{padding:12px 22px;border:0;border-radius:8px;background:#333;color:white;font-size:16px;cursor:pointer}
+#result{font-size:20px;font-weight:bold;margin:20px 0}
+.correct{background:#d8f5d0!important}.wrong{background:#ffd9d9!important}
+</style>
+</head>
+<body>
+<h1>Class 9 Chemistry – MCQ Test</h1>
+<p><b>Chapters:</b> 1. Matter in Our Surroundings &nbsp; 2. Is Matter Around Us Pure?</p>
+<p><b>30 questions • 1 mark each</b></p>
+<form id="quiz"></form>
+<button onclick="check()">Submit Test</button>
+<div id="result"></div>
+<script>
+const qs=[
+["Which state of matter has the maximum intermolecular space?","Solid","Liquid","Gas","None","Gas"],
+["The SI unit of temperature is:","Celsius","Kelvin","Fahrenheit","Degree","Kelvin"],
+["The process of changing a solid directly into gas is called:","Fusion","Sublimation","Condensation","Freezing","Sublimation"],
+["Evaporation causes cooling because particles with higher kinetic energy:","remain on the surface","escape from the surface","become solid","stop moving","escape from the surface"],
+["The boiling point of water at normal atmospheric pressure is:","0°C","50°C","100°C","212°C","100°C"],
+["Which state of matter is highly compressible?","Solid","Liquid","Gas","All equally","Gas"],
+["1°C is equal to how much change in Kelvin temperature?","1 K","2 K","273 K","0 K","1 K"],
+["Diffusion is fastest in:","Solids","Liquids","Gases","None","Gases"],
+["The force of attraction between particles is strongest in:","Gases","Liquids","Solids","All equal","Solids"],
+["A change of state from gas to liquid is called:","Vaporisation","Condensation","Sublimation","Fusion","Condensation"],
+["Which factor increases the rate of evaporation?","Lower temperature","Higher humidity","Larger surface area","Less wind","Larger surface area"],
+["At 0°C, ice and water can coexist because they are at:","melting point","freezing point","both","room temperature","both"],
+["Matter is anything that has:","only mass","only volume","mass and occupies space","only colour","mass and occupies space"],
+["A pure substance contains:","one kind of particles","many kinds of particles always","only gases","only solids","one kind of particles"],
+["A solution is a:","heterogeneous mixture","homogeneous mixture","compound","element","homogeneous mixture"],
+["The component present in smaller amount in a solution is called:","solvent","solute","suspension","colloid","solute"],
+["The component present in larger amount in a solution is called:","solute","solvent","residue","precipitate","solvent"],
+["Which is a homogeneous mixture?","Sand and water","Oil and water","Salt solution","Soil","Salt solution"],
+["Which is a heterogeneous mixture?","Air","Sugar solution","Salt solution","Sand and water","Sand and water"],
+["A suspension is:","homogeneous","heterogeneous","always transparent","a pure substance","heterogeneous"],
+["Particles of a suspension can generally be separated by:","filtration","melting","sublimation","distillation only","filtration"],
+["Tyndall effect is shown by:","true solutions","colloids","pure water","elements","colloids"],
+["Which mixture scatters a beam of light?","True solution","Colloid","Pure substance","Element","Colloid"],
+["Milk is an example of a:","true solution","colloid","element","compound","colloid"],
+["Which method is used to separate cream from milk?","Centrifugation","Sublimation","Chromatography","Evaporation","Centrifugation"],
+["Which method separates different colours in ink?","Filtration","Chromatography","Sedimentation","Decantation","Chromatography"],
+["Salt can be obtained from seawater mainly by:","evaporation","filtration","sublimation","centrifugation","evaporation"],
+["Ammonium chloride can be separated from a mixture of salt and ammonium chloride by:","filtration","sublimation","decantation","centrifugation","sublimation"],
+["A mixture of two miscible liquids with different boiling points can be separated by:","filtration","distillation","handpicking","sedimentation","distillation"],
+["Crystallisation is used to obtain:","pure crystals of a substance","only gases","suspensions","colloids","pure crystals of a substance"]
+];
+const form=document.getElementById("quiz");
+qs.forEach((q,i)=>{
+ let d=document.createElement("div"); d.className="q";
+ d.innerHTML=`<b>${i+1}. ${q[0]}</b>`+q.slice(1,5).map((x,j)=>`<label><input type="radio" name="q${i}" value="${x}"> ${String.fromCharCode(65+j)}. ${x}</label>`).join("");
+ form.appendChild(d);
+});
+function check(){
+ let score=0;
+ qs.forEach((q,i)=>{
+   document.querySelectorAll(`input[name=q${i}]`).forEach(inp=>{
+     inp.parentElement.classList.remove("correct","wrong");
+     if(inp.checked){
+       if(inp.value===q[5]){score++;inp.parentElement.classList.add("correct")}
+       else inp.parentElement.classList.add("wrong");
+     }
+   });
+ });
+ document.getElementById("result").textContent=`Your score: ${score}/30`;
+ window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
+}
+</script>
+</body>
+</html>
